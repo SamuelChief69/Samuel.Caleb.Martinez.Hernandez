@@ -1,0 +1,70 @@
+T1= Rx1 Rz3 Ry5 (esto no)
+
+Rx1= [1 0 0;0 cos(90) sin(90);0 -sin(90) cos(90)]
+Rz3= [cos(45) sin(45) 0;-sin(45) cos(45) 0;0 0 1]
+Ry5=[cos(75) 0 -sin(75);0 1 0;sin(75) 0 cos(75)]
+T1= Ry5*Rz3*Rx1
+
+T2= Rx7 Rz9 Rx2 (esto no)
+
+Rx7= [1 0 0;0 cos(32) sin(32);0 -sin(32) cos(32)]
+Rz9= [cos(150) sin(150) 0;-sin(150) cos(150) 0;0 0 1]
+Rx2= [1 0 0;0 cos(30) sin(30);0 -sin(30) cos(30)]
+T2= Rx2*Rz9*Rx7
+
+T3= Rx10 Ry4 Rz6 (esto no)
+
+Rx10= [1 0 0;0 cos(270) sin(270);0 -sin(270) cos(270)]
+Ry4=[cos(65) 0 -sin(65);0 1 0;sin(65) 0 cos(65)]
+Rz6= [cos(110) sin(110) 0;-sin(110) cos(110) 0;0 0 1]
+T3= Rz6*Ry4*Rx10
+
+T4= Ry8 Rx9 Ry2 (esto no)
+
+Ry8=[cos(27) 0 -sin(27);0 1 0;sin(27) 0 cos(27)]
+Rx9= [1 0 0;0 cos(150) sin(150);0 -sin(150) cos(150)]
+Ry2=[cos(30) 0 -sin(30);0 1 0;sin(30) 0 cos(30)]
+T4= Ry2*Rx9*Ry8
+
+T5= Ry2 Rx9 Ry8 (este no)
+
+Ry2=[cos(30) 0 -sin(30);0 1 0;sin(30) 0 cos(30)]
+Rx9= [1 0 0;0 cos(150) sin(150);0 -sin(150) cos(150)]
+Ry8=[cos(27) 0 -sin(27);0 1 0;sin(27) 0 cos(27)]
+T5= Ry8*Rx9*Ry2
+
+T6= Rz6 Ry4 Rz2 (este no)
+
+Rz6= [cos(110) sin(110) 0;-sin(110) cos(110) 0;0 0 1]
+Ry4=[cos(65) 0 -sin(65);0 1 0;sin(65) 0 cos(65)]
+Rz2= [cos(30) sin(30) 0;-sin(30) cos(30) 0;0 0 1]
+T6= Rz2*Ry4*Rz6
+
+T7= Rx2 Ry3 Rz4 
+
+Rx2= [1 0 0;0 cos(30) sin(30);0 -sin(30) cos(30)]
+Ry3=[cos(45) 0 -sin(45);0 1 0;sin(45) 0 cos(45)]
+Rz4= [cos(65) sin(65) 0;-sin(65) cos(65) 0;0 0 1]
+T7= Rz4*Ry3*Rx2
+
+T8= Rx1 Ry1 Rz6
+
+Rx1= [1 0 0;0 cos(90) sin(90);0 -sin(90) cos(90)]
+Ry1=[cos(90) 0 -sin(90);0 1 0;sin(90) 0 cos(90)]
+Rz6= [cos(110) sin(110) 0;-sin(110) cos(110) 0;0 0 1]
+T8= Rz6*Ry1*Rx1
+
+T9= Rz7 Ry5 Rx9 
+
+Rz7= [cos(32) sin(32) 0;-sin(32) cos(32) 0;0 0 1]
+Ry5=[cos(75) 0 -sin(75);0 1 0;sin(75) 0 cos(75)]
+Rx9= [1 0 0;0 cos(150) sin(150);0 -sin(150) cos(150)]
+T9= Rx9*Ry5*Rz7
+
+T10= Rz10 Ry10 Rz2
+
+Rz10= [cos(270) sin(270) 0;-sin(270) cos(270) 0;0 0 1]
+Ry10=[cos(270) 0 -sin(270);0 1 0;sin(270) 0 cos(270)]
+Rz2= [cos(30) sin(30) 0;-sin(30) cos(30) 0;0 0 1]
+T10= Rz2*Ry10*Rz10
+

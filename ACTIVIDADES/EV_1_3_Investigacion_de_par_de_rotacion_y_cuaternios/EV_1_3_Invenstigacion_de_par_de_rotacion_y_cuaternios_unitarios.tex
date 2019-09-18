@@ -1,0 +1,66 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[latin1]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\author{Samuel Caleb Martínez Hernández}
+\title{Par de rotación y cuaternios unitarios}
+\begin{document}
+\maketitle
+\begin{center}
+Ingeniería en mecatrónica
+\end{center}
+\begin{center}
+\includegraphics[width=7cm]{EV1_3/logo.png} 
+\end{center}
+\includegraphics[scale=1]{EV1_3/1.jpg} 
+\section{Cuaternio Unitario}
+Un cuaternio unitario es un conjunto de 2 datos y es representado por la letra "Q" 
+\begin{eqnarray}
+Q=(\rceil ,\varepsilon) 
+\end{eqnarray}
+El primer símbolo es el escalar y el segundo es el vectorial.
+\begin{center}
+\includegraphics[scale=0.7]{EV1_3/2.png}
+\end{center}
+ 
+Estos datos se subdividen en 4, tomando en cuenta el enfasis que se tiene en "x","y" y "z", como parte de euler (vectorial).
+
+\section{Matriz de cambio de orientación a partir del cuaternio} 
+\begin{center}
+\begin{figure}[hbtp]
+\centering
+\includegraphics[scale=0.8]{EV1_3/3.png}
+\caption{Restricción}
+\end{figure}
+
+\end{center}
+Cuando se utiliza la restricción del cuaternio para poder hacer la matriz de cambio que se relaciona con la rotación, ademas de tomar las funciones de la parte escalar y vectorial, nos queda una matriz de este estilo...
+
+\begin{center}
+\includegraphics[scale=0.5]{EV1_3/4.png} 
+\end{center}
+
+\section{Rotación}
+Rotación es el movimiento de cambio de orientación de un cuerpo o un sistema de referencia de forma que una línea (llamada eje de rotación)o un punto parece fijo. La rotación de un cuerpo se presenta mediante un operador que afecta un conjunto de puntos o vectores. 
+
+\section{¿Que resulta de esto?}
+Desde un enfoque practico, cuando se tienen los cuatro valores numéricos del cuaternio, es decir, la parte escalar y los tres de la parte vectorial, podemos conocer la matriz de cambio de orientación del cuaternio. Resulta una composición simple y que a comparación de las matrices de rotación, estas son mas eficaces y desde luego estables  hablando.
+
+\section{Aplicaciones}
+Como ingeniero me interesa conocer la utilidad de los conocimientos adquiridos, y a juzgar de que los cuaternarios son útiles en aplicaciones de gráficos por computadora, robotica, navegación y mecánica orbital de satélites, se puede llegar a la conclusión de que tales conocimientos tienen una muy justificada razón de ser, sobre todo si hablamos de cinemática de robots.
+
+De esta manera podemos representar las rotaciones y orientaciones de objetos en las tres dimensiones existentes. 
+
+\begin{center}
+\includegraphics[scale=1]{EV1_3/5.png} 
+\end{center}
+
+\paragraph{Referencias}
+
+Del Castillo, G. T. (1999). La representación de rotaciones mediante cuaterniones. Miscelanea Matemtica, 43-50.
+
+\end{document}
