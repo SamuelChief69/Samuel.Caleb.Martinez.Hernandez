@@ -1,0 +1,78 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[latin1]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\author{Samuel Caleb Martínez Hernández}
+\title{Convencion Denavit Hartnberg }
+\begin{document}
+\includegraphics[scale=1]{EV/logo.png} \\ 
+\textbf{{\Huge \begin{center}
+Convención de Devanit Hartenberg
+\end{center}}}\\
+
+\begin{center}
+{\Large Ing. Mecatrónica 7-A  }
+\end{center}\\
+\begin{center}
+{\Large Samuel Caleb Martínez Hernández }
+\end{center} \\
+\begin{center}
+{\Large Cinemática de Robots}
+\end{center}
+\begin{center}
+ \includegraphics[scale=0.5]{EV/FIG.png}
+ \end{center} \\
+\section{Introducción}
+\begin{flushleft}
+¿Qué es y para que sirve? Como objetivo de esta actividad se espera conocer a profundidad de este tema en particular.\\ 
+
+La convención de Denavit Hartenberg o DH por sus siglas, es un procedimiento sistemático que sirve para describir la estructura cinemática de una cadena articulada constituida por articulaciones con un solo grado de libertad. \\
+
+Para lograr comprender este procedimiento, se le sera explicado con un ejemplo gráfico y analítico. 
+\end{flushleft}\\
+
+\section{Ejemplo Gráfico}
+Pondremos en contexto un brazo robotico con dos articulaciones solamente. \\
+
+\includegraphics[scale=1]{EV/DH1.png} \\
+
+Aunque lo parezca, la herramienta del robot (Pinza) no es una articulación, es decir, en este caso no cuenta con grados de libertad.\\
+
+Lo que se observa a simple vista es que se tienen dos articulaciones con sus respectivos grados de libertad. Por otro lado, vemos ya trazados ejes "X" y "Y" de ambas articulaciones.\\
+\includegraphics[scale=1]{EV/DH2.png} 
+
+El numero de articulaciones iría en incremento a partir de uno dependiendo de cuantas sean, osea, a (n +1).\\
+
+\includegraphics[scale=1]{EV/DH3.png} \\
+
+ahora "z" será la posición en la que cada articulación apunta, el cual vendría siendo básicamente la matriz de rotación de cada articulación con respecto a todas o independientemente si se trata de la primera.\\
+
+\includegraphics[scale=1]{EV/DH4.png} \\
+
+Finalmente establezcamos algunas variables.
+
+* C será Coseno\\
+* S será Seno\\
+* a será l, que a la vez es lo que mida.\\
+* Teta, bueno,será el angulo de inclinación, osea, una variable.\\ \\
+
+Bien, tenemos dos articulaciones, la ultima depende de la anterior y así sucesivamente y bueno, la tranformación global de estas se daría de la siguiente manera... \\
+
+\includegraphics[scale=1]{EV/DH5.png} \\ 
+
+"C12" se trata del ceno de teta uno mas teta dos, igualmente con el seno. \\
+
+De esta manera se concluye el ejercicio. \\
+
+\section{Conclusión}
+Cuando vemos el proceso que se realizo con dos simples articulaciones, es fácil darse cuenta de que al final, la posición rotacional final de cada articulación dependerán de la anterior a ella, una tras otra, llegando al final del robot, empezando desde la base hasta la herramienta. 
+
+\paragraph{\textbf{{\Large Referencias}}}
+
+GIRALDO, Luis Felipe; DELGADO, Edilson; CASTELLANOS, Germán. Cinemática inversa de un brazo robot utilizando algoritmos genéticos. Revista Avances en Sistemas e Informática, 2006, vol. 3, no 1, p. 29-34.
+
+\end{document}
