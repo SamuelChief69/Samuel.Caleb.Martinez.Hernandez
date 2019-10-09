@@ -1,0 +1,83 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[latin1]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\author{Samuel Caleb Martínez Hernández}
+\title{Angulos de Euler (Parametrización)}
+\begin{document}
+\includegraphics[scale=1]{EV/logo.png} 
+\section{Angulos de euler }
+\begin{center}
+Samuel Caleb Martínez Hernández\\ \\
+Ing. Mecatrónica \\ \\
+7-A\\ \\
+Cinemática de Robots\\ \\
+\end{center}
+\begin{center}
+\includegraphics[scale=1]{EV/1.png} 
+\end{center}\\ \\
+
+\section{Introducción}
+Cuando hablamos del tema de los angulos de euler es importante saber una cosa primeramente, si nos referimos al movimiento en general de un cuerpo solido rigido, se sabe que este posee seis grados de libertad, cosa que, en la parametrizacion del movimiento de dicho solido, los seis grados ya mencionados se pueden descomponer en tres de traslación y tres de rotación, estos de un cuerpo respectivamente. \\
+\begin{center}
+\includegraphics[scale=1]{EV/2.jpg} 
+\end{center}\\
+
+Para los grados de libertad de traslación, nos sirve con otorgar el desplazamiento de un punto exacto del solido, es decir, su centro de reducción.\\
+
+En cuanto a la rotación, cambian las formas de parametrizarla, haciéndolas diferentes en si, por así decirlo, se puede:\\
+
+* Dar la matriz de rotación que pasa de un sistema de referencia ligado al solido, a uno exterior tomado como fijo, dicha matriz cuenta con nueve elementos sometidos a seis vínculos respectivamente, esto multiplica el numero de ecuaciones que son necesarias para el análisis descriptivo del movimiento.\\
+
+*Dar la orientación del eje de giro por medio de dos ángulos y el ángulo de giro alrededor de este eje. Cuenta con el inconveniente, como los ángulos de Euler y otros, que requieren un mucho uso de funciones trigonométricas.\\
+
+\section{Posición y matriz de rotación}\\
+
+Con el fin de obtener el resultado de la rotación, necesitamos observar qué posición ocupa en el sistema de referencia fijo un punto perteneciente al sólido. El vector de posición se escribirá con componentes diferentes en la base fija y en la base móvil, aun si se trata del mismo vector.\\
+\begin{center}
+\includegraphics[scale=1]{EV/3.png} 
+\end{center}\\
+debido a ser un punto del sólido, las componentes (X,Y,Z) serán constantes. El problema radica en que se reduce a relacionar los vectores de las bases. Para ello, componemos las tres rotaciones.\\
+
+La primera rotacion de un angulo tetha en torno a el eje 0z1 = 0z2, que nos lleva al solido 2. La relacion entre la base fija 1 y la intermedia 2, la cual es... \\
+\includegraphics[scale=1]{EV/4.png}\\
+
+Para la inversa se deduce en simples cambios de signo que se acomodan de la siguiente manera... \\  \\
+\includegraphics[scale=1]{EV/5.png}\\ \\
+ 
+La segunda rotación se basa en el giro del angulo theta alrededor del eje 0x2=0x3. La linea de nodos de la rotación nos lleva al solido intermedio numero tres, el cual se relaciona directamente con la 2 a causa de....\\ \\
+\includegraphics[scale=1]{EV/6.png} \\ \\
+
+Nuevamente, la inversa ...\\ \\ 
+\includegraphics[scale=1]{EV/7.png} \\ \\
+
+Ya para finalizar, el tercer giro el cual corresponde a un nuevo giro de un angulo gama, alrededor del angulo 0z3=0z4 la relación entre las bases 3 y 4 es análoga a la que hay entre la 1 y la 2.\\ \\
+\includegraphics[scale=1]{EV/8.png} \\ \\
+
+Lo mismo, su inversa seria ...\\ \\
+
+\includegraphics[scale=1]{EV/9.png} \\ \\
+Y nuestra matriz de rotación:\\
+\includegraphics[scale=1]{EV/10.png}\\ \\
+ 
+\section{Conclusión}\\
+Como idea final de lo que se acaba de realizar, se sabe que la primer rotación es la precesión, seguida de la segunda rotación, la nutación y para finalizar con la ultima rotación es decir la tercera, la "rotación". Estas prceden del analisis del movimiento terrestre del solido. La rotación se trato del movimiento alrededor del eje terrestre, la precesión es el lento movimiento del eje, el cual provoca que la estrella situada en el polo norte celeste cambie con el pasar del tiempo. Finalmente, la nutación fue el cambio que tuvo el solido en cuanto a la inclinación del eje terrestre. 
+
+\paragraph{Referencias}
+@article{gonzalez2008euler,
+  title={Euler y la Geometr{\'\i}a Anal{\'\i}tica},
+  author={Gonz{\'a}lez Urbaneja, Pedro Miguel},
+  journal={Quaderns d'hist{\`o}ria de l'enginyeria},
+  volume={9},
+  pages={83--116},
+  year={2008},
+  publisher={Centre de recerca per a la Hist{\`o}ria de la T{\`e}cnica" Francesc Santpon{\c{c}} i Roca~?}
+}
+
+
+
+\end{document}
