@@ -1,0 +1,172 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[latin1]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\author{Samuel Caleb Martínez Hernández}
+\title{Metodo geometrico, algebraico y desacoplo cinematico}
+\begin{document}
+\includegraphics[scale=1]{EV/logo.png} \\
+\begin{center}
+{\Huge Métodos geométricos, algebraicos y desacoplo cinemático} \\ 
+\end{center}\\ \\
+\begin{center}
+Samuel Caleb Martínez Hernández\\
+\end{center}
+ 
+\begin{center}
+Ing. mecatrónica\\
+\end{center}
+
+\begin{center}
+7-A\\	
+\end{center}
+
+\begin{center}
+Cinemática de movimientos\\
+\end{center}\\
+
+\begin{center}
+ \includegraphics[scale=0.5]{EV/1.jpeg}
+ \end{center}\\ 
+ 
+ \section{Objetivos}
+Describir los métodos geométricos, algebraicos y de desacoplo de la cinemática de posición.   \\ \\
+ 
+\section{Cinemática de posición}
+Calcularemos las coordenadas articulares respecto a la localización en el espacio y viceversa.\\
+
+\includegraphics[scale=1]{EV/2.png} \\
+
+La cinemática del robot estudia el movimiento del mismo con respecto a un sistema de referencia fijo sin considerar las fuerzas y momentos que originan dicho movimiento, por lo cual el estudio de la fuerza y la velocidad pasaran a segundo plano, al menos en esta ocación. \\ \\
+
+\begin{center}
+ {\Large Cinemática directa}
+ \end{center} \\ \\
+
+Determina la localización del extremo del robot, con respecto a un sistema de coordenadas de referencia, conocidos los valores de las articulaciones y los parámetros geométricos de los elementos del robot.\\
+
+\begin{center}
+ {\Large Cinemática Inversa}
+ \end{center} \\ \\ 
+
+Conocida la localización del robot, determina cual debe ser la configuración del robot (articulaciones y parámetros geométricos). \\ 
+
+\begin{center}
+\includegraphics[scale=0.5]{EV/3.png} 
+\end{center}\\ \\
+
+\section{Método geométrico(Cinemática Directa)}\\
+
+* Método no sistemático    (aplicación limitada a robots con pocos grados de libertad).\\
+* utiliza relaciones geométricas para obtener directamente la posición del extremo del robot  en función de las variables articulares.\\
+* Requiere buena visión espacial.\\
+
+* Normalmente se emplea para la obtención de la posición y no de la orientación. \\ 
+
+* Pertenece a la cinemática directa.\\ 
+
+\includegraphics[scale=1]{EV/4.png} \\ \\ \\
+
+\section{Método Geométrico Inverso}\\ 
+
+Conocida a localización del robot, determina cual debe ser la configuración del robot (articulaciones y parámetros geométricos).\\
+
+\begin{center}
+ \includegraphics[scale=1]{EV/5.png}
+ \end{center} \\
+
+1.- La resoluciones del problema no es sistemático.\\ 
+2.- Depende fuertemente de la configuración del robot.\\
+3.- Es encontrar la siguiente relación explicita (solución cerrada):\\
+
+\begin{center}
+\includegraphics[scale=1]{EV/6.png} 
+\end{center}\\
+
+4.- No existe siempre solución cerrada.\\ 
+
+Condiciones para que exista solución cerrada: \\
+A)	3 ejes de articulación      	adyacentes interseccionan 	en un punto (robot PUMA y 	Stanford)\\
+B)	3 ejes de articulación 			adyacentes son paralelos 		entre si (ASEA, etc.).\\ \\
+
+El método geométrico se basa en descomponer la cadena cinemática en distintos planos geométricos y resolviendo por trigonométrica cada plano. Se trata de encontrar el numero suficiente de relaciones geométricas para posicionar el extremo del robot. Se utiliza para las primeras articulaciones. \\
+
+{\Large Robot esférico con 3 grados de libertad.}\\
+
+\begin{center}
+\includegraphics[scale=1]{EV/7.png} 
+\end{center}\\
+
+Datos: PX, PY, PZ donde se quiere situar el extremo del robot.\\
+
+\includegraphics[scale=1]{EV/8.png} 
+
+
+\section{Matrices Homogeneas (MTH) - Metodo Algebraico }\\ \\
+
+Se basa en manipular las ecuaciones resultantes obtenido a partir del modelo cinemático directo: \\
+
+Esto es, despejar las n variables qi en función de los vectores n, o, a, p: 
+
+Usando las matrices de transformación homogénea, trabajaremos de la siguiente manera: \\
+
+\includegraphics[scale=1]{EV/9.png} \\
+
+Es importante recalcar que en este método se trata de igualar los elementos de ambos lados de cada ecuación, tomando los casos en los que solo aparezca una variable de articulación, empleando identidades trigonométricas y buscando divisiones en función de arcos tangentes.\\
+
+Como ejemplo: tomaremos este robot esférico con 3 grados de libertad y usaremos tomaremos la tabla de denavit hartenberg, para hacer el método de matrices homogéneas.  \\
+
+\includegraphics[scale=1]{EV/10.png} \\ 
+
+luego... ha ha ha\\
+
+\includegraphics[scale=1]{EV/11.png} \\
+
+Finalmente ... ha ha ha\\ 
+
+\includegraphics[scale=1]{EV/12.png} \\
+
+\section{Desacoplo Cinematico - Cinematica Inversa}\\
+
+Se basan en la resolución independiente de los grados de libertad que posicionan y de lo que orientan la muñeca.\\
+Por lo que el problema cinemático inverso se divide en dos subproblemas. \\
+
+	1.-Resolver las tres primeras articulaciones de posición. \\
+	2.-Resolver las tres ultimas articulaciones que corresponden  a la 			muñeca. \\
+	
+	
+Método de resolución:\\
+
+1) A partir de la posición y orientación que se busca [n, o, a, p], se obtiene el punto de corte de los 3 últimos grados de libertad (punto de muñeca Pm).\\ 
+2) Se resuelve el problema cinemático inverso para el brazo de 3 GDL (q1,q2,q3) que se llega hasta la Pm (desde la base).\\
+3)Se resuelve el problema cinemático inverso que va desde Pm hasta el punto final pf (calculando q4,q5,q6).
+
+
+\section*{Bibliográfica}
+
+@article{vele2005cinematica,
+  title={Cinematica inversa de un robot bipedo},
+  author={Vele, Oscar Luis},
+  journal={Cuenca-Ecuador, Noviembre},
+  year={2005}
+} \\ 
+
+@article{giraldo2006cinematica,
+  title={Cinem{\'a}tica inversa de un brazo robot utilizando algoritmos gen{\'e}ticos},
+  author={Giraldo, Luis Felipe and Delgado, Edilson and Castellanos, Germ{\'a}n},
+  journal={Revista Avances en Sistemas e Inform{\'a}tica},
+  volume={3},
+  number={1},
+  pages={29--34},
+  year={2006},
+  publisher={Universidad Nacional de Colombia}
+}
+
+
+
+
+\end{document}
