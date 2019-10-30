@@ -1,0 +1,92 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[latin1]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\author{Samuel Caleb Martínez Hernández}
+\title{Cinematica Directa e Inversa en Manipuladores Paralelos}
+\begin{document}
+\includegraphics[scale=1]{EV/logo.png}  \\ \\
+
+\begin{center}
+\begin{Huge}
+Cinematica Directa e Inversa en Manipuladores Paralelos\\ 
+\end{Huge}
+
+Samuel Caleb Martínez Hernández\\ 
+
+Ing. Mecatrónica 7-A\\ 
+
+Cinematica de Robots \\ 
+
+Evidencia  3.5\\
+\end{center}
+
+\begin{center}
+ \includegraphics[scale=0.5]{EV/5.jpg}
+ \end{center} \\
+
+\section*{Introducción }
+Esta evidencia comienza con una leve explicación a cerca de la cinemática directa e inversa por separado, es decir, definiciones independientes, con el motivo de poder llegar a una mejor conclusión sobre el tema en cuestión. \\
+
+Como ya se ha comentado antes, la cinemática en robots, estudian los movimientos del robot y todo los factores que se involucran en el, como la posición, velocidad, aceleración, etc, etc, etc.\\
+
+Desde luego, esto le incumbe a cada parte del robot.  \\
+
+Lo que respecta a la fuerza que causa el movimiento y la relación que tiene con esta, es asunto de la dinámica de robots. \\ \\
+
+
+\section*{Cinemática Directa e inversa}
+
+La cinemática directa es una técnica usada para calcular la posición de los elementos de una estructura articulada, es decir, un robot. Los cálculos son realizados a partir de sus componentes fijas y el cambio inducido por las articulaciones del robot. \\
+
+\begin{center}
+ \includegraphics[scale=0.5]{EV/2.jpeg}
+ \end{center} \\
+
+También, se refiere al uso de ecuaciones cinemáticas para calcular la posición de su actuador final, osea, la herramienta del robot, que por cierto cabe destacar que generalmente se trata de herramientas 'pick and place' en cuanto a manipuladores paralelos se refiere, aunque de manipuladores paralelos se hablará mas tarde. \\
+
+El calculo de la posición de la herramienta se hace a partir de valores específicos denominados parámetros. \\
+
+\begin{center}
+ \includegraphics[scale=0.7]{EV/3.png}
+ \end{center} \\
+
+La cinemática inversa por otro lado, es todo lo contrario a la cinemática directa, aunque suene un poco hilarante, puesto que se trata del calculo de conjuntos de parámetros a partir de una posición especifica del actuador final. \\ \\
+
+\section*{Manipuladores Paralelos}
+
+Bueno, ¿Qué se puede decir acerca de esta clase de robot? En cuanto al sector industrial se refiere, el manipulador paralelo a tomado fuerza en todos los sentidos, debido a que en la industria se requiere velocidad y precisión y esta clase de manipulador cumple con ambas cualidades, ademas de no resultar muy espacioso cuando se es diseñado para tareas simples. \\ 
+
+\begin{center}
+ \includegraphics[scale=1]{EV/1.jpeg}
+ \end{center} \\
+
+Los manipuladores paralelos pueden llegar a tener mayor capacidad de carga y alta rigidez, lo cual, les permite ofrecer prestaciones superiores a las de otros robots de serie, sobre todo, en tareas en las que las altas aceleraciones y velocidades son factores indispensables. \\ 
+
+\begin{center}
+\includegraphics[scale=1]{EV/4.jpg} 
+\end{center}\\
+
+En cuanto a la cinemática directa o inversa, y esta clase de manipuladores se refiere, no hay mucha diferencia en cuanto a su calculo, es decir, tanto en los robots comunes como los de esta clase, existen articulaciones y un punto final, pero de lo que si se puede diferenciar es en la orientación de estas y su punto de partida, dado que pueden tener 3 puntos de salida paralelos o 4, según sea el diseño del manipulador, pero en términos matemáticos, un análisis cinemático de este manipulador realmente siguen un mismo patrón. \\ \\
+
+\section*{Conclusión}
+Puede afirmarse que el desarrollo de un análisis cinemático del manipulador paralelo puede llegar a ser mas complejo y mas tardado debido a la arquitectura natural del manipulador, sin embargo, no se tiene que desviar mucho del concepto de un análisis cinemático común y corriente, es cuestión de saber identificar bien un los parámetros o posiciones del manipulador, según sea el caso, para poder realizar dicho análisis. \\ \\
+
+\section*{Referencias }
+@article{giraldo2006cinematica,
+  title={Cinem{\'a}tica inversa de un brazo robot utilizando algoritmos gen{\'e}ticos},
+  author={Giraldo, Luis Felipe and Delgado, Edilson and Castellanos, Germ{\'a}n},
+  journal={Revista Avances en Sistemas e Inform{\'a}tica},
+  volume={3},
+  number={1},
+  pages={29--34},
+  year={2006},
+  publisher={Universidad Nacional de Colombia}
+}
+
+
+\end{document}
